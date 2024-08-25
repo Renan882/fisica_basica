@@ -9,29 +9,34 @@
 <body>
     <header>
         <h1>Física Básica</h1>
-    </header>
-    <div class="container">
         
+        <div class="user-icon">
+            <img src="../static/iconeusu.jfif" alt="Ícone de Usuário">
+        </div>
+    </header>
+
+    <div class="container">
+       
         <div id="menuToggle" class="menu-btn">
             <span class="arrow">&#9664;</span>
         </div>
 
         
-        <nav class="sidebar" id="sidebar">
+        <nav class="sidebar hidden" id="sidebar">
             <ul>
                 <li class="module">
                     <span>Mecânica</span>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu hidden">
                         <li class="submodule">
                             <span>Gravitação</span>
-                            <ul class="sub-sub-menu">
+                            <ul class="sub-sub-menu hidden">
                                 <li><a href="#">Conteúdos</a></li>
                                 <li><a href="#">Questões</a></li>
                             </ul>
                         </li>
                         <li class="submodule">
                             <span>Lançamentos</span>
-                            <ul class="sub-sub-menu">
+                            <ul class="sub-sub-menu hidden">
                                 <li><a href="#">Conteúdos</a></li>
                                 <li><a href="#">Questões</a></li>
                             </ul>
@@ -40,17 +45,17 @@
                 </li>
                 <li class="module">
                     <span>Ótica</span>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu hidden">
                         <li class="submodule">
                             <span>Reflexão</span>
-                            <ul class="sub-sub-menu">
+                            <ul class="sub-sub-menu hidden">
                                 <li><a href="#">Conteúdos</a></li>
                                 <li><a href="#">Questões</a></li>
                             </ul>
                         </li>
                         <li class="submodule">
                             <span>Refração</span>
-                            <ul class="sub-sub-menu">
+                            <ul class="sub-sub-menu hidden">
                                 <li><a href="#">Conteúdos</a></li>
                                 <li><a href="#">Questões</a></li>
                             </ul>
@@ -64,6 +69,16 @@
         <main>
             <p>Bem-vindo à Física Básica! Selecione um módulo para começar.</p>
         </main>
+    </div>
+
+    
+    <div class="login-button hidden" id="loginButton">
+        <button>Login</button>
+    </div>
+
+    
+    <div class="post-question-button">
+        <img src="../static/iconequest.jfif" alt="Postar Questão">
     </div>
 
     <script src="../static/script.js"></script>

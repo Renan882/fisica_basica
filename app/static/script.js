@@ -1,28 +1,33 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.querySelector(".menu-btn");
+    const sidebar = document.querySelector(".sidebar");
+    const loginButton = document.querySelector("#loginButton");
+    const modules = document.querySelectorAll(".module > span");
 
-document.getElementById('menuToggle').addEventListener('click', function() {
-    const sidebar = document.getElementById('sidebar');
-    const main = document.querySelector('main');
     
-    
-    sidebar.classList.toggle('show');
-    main.classList.toggle('with-sidebar');
-});
-
-
-document.querySelectorAll('.module > span').forEach(function(module) {
-    module.addEventListener('click', function() {
-        const subMenu = this.nextElementSibling;
-        
-        
-        subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+    toggleButton.addEventListener("click", function() {
+        sidebar.classList.toggle("hidden");
+        loginButton.classList.toggle("hidden");
     });
-});
 
+    
+    modules.forEach(module => {
+        module.addEventListener("click", function() {
+            const subMenu = this.nextElementSibling;
+            if (subMenu) {
+                subMenu.classList.toggle("hidden");
+            }
+        });
+    });
 
-document.querySelectorAll('.submodule > span').forEach(function(submodule) {
-    submodule.addEventListener('click', function() {
-        const subSubMenu = this.nextElementSibling;
-        
-        subSubMenu.style.display = subSubMenu.style.display === 'block' ? 'none' : 'block';
+    
+    const subModules = document.querySelectorAll(".submodule > span");
+    subModules.forEach(subModule => {
+        subModule.addEventListener("click", function() {
+            const subSubMenu = this.nextElementSibling;
+            if (subSubMenu) {
+                subSubMenu.classList.toggle("hidden");
+            }
+        });
     });
 });
